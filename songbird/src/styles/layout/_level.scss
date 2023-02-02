@@ -1,0 +1,46 @@
+.item_quiz {
+  pointer-events: none;
+
+  & .menu__link {
+    color: $font-color-base-bright;
+  }
+}
+
+.level {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-areas: 
+  "bird bird bird"
+  "menu answer answer"
+  "menu answer answer";
+}
+
+.current-bird {
+  grid-area: bird;
+}
+
+.answers {
+  grid-area: menu;
+}
+
+.current-answer {
+  grid-area: answer;
+}
+
+@media screen and (max-width: 935px) {
+  .level {
+    width: auto;
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .level {
+    grid-template-areas:
+        "bird bird bird"
+        "menu menu menu"
+        "answer answer answer";
+  }
+}

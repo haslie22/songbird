@@ -1,0 +1,46 @@
+.main__quiz {
+  max-width: 906px;
+  margin: 0 auto;
+}
+
+.quiz__state-bar {
+  margin: 30px 0 20px 0;
+}
+
+.state-bar {
+  border: 1px solid $font-color-base;
+  border-radius: 8px;
+}
+
+.bar {
+  display: flex;
+  justify-content: center;
+}
+
+.bar__content {
+  display: flex;
+  width: 100%;
+}
+
+.bar__elem {
+  font: $font-base-gameline;
+  color: $font-color-base;
+  width: calc(100%/6);
+  text-align: center;
+  padding: 10px 0;
+
+  &.active {
+    background-color: $bg-color-transparent;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  .bar__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bar__elem {
+    width: 100%;
+  }
+}

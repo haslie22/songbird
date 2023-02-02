@@ -1,0 +1,154 @@
+.current-answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  height: 57.7%;
+  border: 1px solid $font-color-base;
+  border-radius: 8px;
+}
+
+.current-answer__placeholder {
+  width: 42%;
+  text-align: center;
+  font: $font-base-placeholder;
+  color: $font-color-base;
+}
+
+.card {
+  height: 100%;
+}
+
+.card__inner {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+        "image name name"
+        "image player player"
+        "text text text";
+  align-items: flex-start;
+  gap: 25px;
+  padding: 15px 30px 30px 15px;
+
+  & .player {
+    margin: 0;
+    padding: 0;
+  }
+
+  & .player__time {
+    margin: 0;
+  }
+
+  & .player__play-button {
+    width: 20px;
+    height: 20px;
+    margin-right: 35px;
+  }
+
+  & .player__timeline-container {
+    min-width: 242px;
+  }
+}
+
+.card__image-container {
+  grid-area: image;
+  max-width: 200px;
+  height: 155px;
+  border: 1px solid $font-color-base;
+  border-radius: 5px;
+}
+
+.card__name-container {
+  grid-area: name;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font: $font-accident-bird;
+  color: $font-color-base;
+}
+
+.card__subtitle {
+  font: $font-accident-bird-latin;
+  color: $font-color-base-bright;
+}
+
+.card__info-container {
+  grid-area: text;
+}
+
+.card__player {
+  grid-area: player;
+}
+
+.card__text {
+  font: $font-base-bird-desc;
+  color: $font-color-base;
+  max-height: 75px;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 860px) {
+  .card__inner {
+
+    & .player__timeline-container {
+      min-width: auto;
+      max-width: 200px;
+    }
+
+    & .player__play-button, 
+    & .player__volume-button {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 729px) {
+  .card__title {
+    font: $font-accident-bird-latin;
+  }
+
+  .card__subtitle {
+    font: $font-latin-small;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .card__inner {
+    & .player {
+      max-width: none;
+      width: auto;
+    }
+
+    & .player__timeline-container,
+    & .player__volumeline-container {
+      max-width: none;
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .current-answer {
+    height: auto;
+  }
+
+  .card__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card__image-container {
+    width: 200px;
+  }
+
+  .card__title, .card__subtitle {
+    text-align: center;
+  }
+
+  .card__inner .player {
+    width: 100%;
+  }
+}

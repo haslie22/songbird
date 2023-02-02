@@ -1,0 +1,22 @@
+.score {
+  position: relative;
+  max-width: 126px;
+  margin: 0 auto;
+}
+
+.quiz__score {
+  margin-bottom: 20px;
+}
+
+.score__text {
+  position: relative;
+  font: $font-accident-score;
+  color: $font-color-base;
+  text-align: center;
+}
+
+.score__icon {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+}

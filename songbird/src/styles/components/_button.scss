@@ -1,0 +1,52 @@
+.button {
+  margin: 40px 0 20px 0;
+  pointer-events: none;
+  
+  &.enabled {
+    cursor: pointer;
+    pointer-events: all;
+    
+    & .button__text{
+      color: $font-color-base;
+
+      &:hover {
+        color: $font-color-sub-warm;
+      }
+    }
+  }
+}
+
+.button__text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: $font-accident-button;
+  color: $bg-color-transparent;
+  transition: all .3s ease-in-out;
+
+  & svg {
+    position: absolute;
+  }
+}
+
+
+.button__text svg path {
+  stroke: $bg-color-transparent;
+  fill: transparent;
+  transition: .3s ease-in-out;
+}
+
+.button.enabled path {
+  stroke: $font-color-sec-cold;
+}
+
+.popup_button.button.enabled {
+  & .button__text:hover{
+    color: #FFF;
+  }
+  
+  & path {
+  stroke: rgb(255, 255, 255);
+  }
+}

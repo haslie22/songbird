@@ -1,0 +1,116 @@
+.result__wrapper {
+  position: relative;
+  height: calc(100vh - 86px - 69px);
+  min-height: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.popup {
+  position: absolute;
+  max-width: 500px;
+  min-height: 450px;
+  width: 70%;
+  background-color: $bg-color-light-transparent;
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 60px 90px;
+}
+
+.result__popup {
+  right: 5vw;
+  top: 10vh;
+}
+
+.popup__title {
+  font: $font-accident-popup-title;
+  color: $font-color-base;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup__text {
+  margin-bottom: 60px;
+}
+
+.popup__text {
+  font: $font-accident-popup-subtitle;
+  color: $font-color-base;
+  text-align: center;
+}
+
+.score-final {
+  font: $font-accident-score;
+  color: $font-color-base;
+}
+
+.popup__score {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px 25px;
+}
+
+.popup__icon {
+  position: absolute;
+  left: 55px;
+  bottom: 20px;
+}
+
+.score-final__divider {
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 1199px) {
+  .popup {
+    left: calc((100vw - 500px)/2);
+    top: calc((100vh - 450px)/2);
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .popup {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 629px) {
+  .popup {
+    width: 90%;
+    padding: 50px 80px;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .popup {
+    left: calc((100vw - 470px)/2);
+    width: 470px;
+    padding: 30px 60px;
+  }
+
+  .popup__score {
+    margin: 0;
+  }
+
+  .popup__icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .popup {
+    left: calc((100vw - 300px)/2);
+    width: 300px;
+    min-height: 350px;
+    padding: 20px 40px;
+  }
+
+  .popup__title {
+    font: $font-motto-672;
+  }
+
+  .popup__text {
+    margin-bottom: 30px;
+}
+
+}

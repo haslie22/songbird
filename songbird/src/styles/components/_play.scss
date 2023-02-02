@@ -1,0 +1,78 @@
+.player {
+  max-width: 300px;
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-radius: 8px;
+}
+
+.card__player {
+  margin-bottom: 20px;
+}
+
+.player__active {
+  background: $bg-color-transparent;
+}
+
+.trackline,
+.volume {
+  display: flex;
+  height: 30px;
+  align-items: center;
+}
+
+.player__time {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.time__divider {
+  margin: 0 5px;
+}
+
+.player__play-button,
+.player__volume-button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.player__play-icon,
+.player__pause-icon,
+.player__volume-icon,
+.player__mute-icon {
+  position: absolute;
+  left: 0;
+}
+
+
+.player__timeline-container,
+.player__volumeline-container {
+  flex-grow: 1;
+  margin: auto 0;
+}
+
+.player__timeline,
+.player__volumeline {
+  height: 4px;
+  width: 100%;
+  border-radius: 1px;
+  background-color: $bg-color-transparent;
+  cursor: pointer;
+}
+
+.play-progress,
+.volume-progress {
+  position: relative;
+  height: 4px;
+  width: 0;
+  border-radius: 1px;
+  background-color: $font-color-base;
+  z-index: 1;
+}
+
+.muted-progress {
+  background-color: $bg-color-transparent;
+}
